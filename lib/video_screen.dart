@@ -16,26 +16,39 @@ class _VideoScreenState extends State<VideoScreen> {
   void initState() {
     _controller = YoutubePlayerController(
         initialVideoId: convertedUrl(context.read(selectedVideoProvider).state!.id),
-      flags: const YoutubePlayerFlags(autoPlay: true, )
+      flags: const YoutubePlayerFlags(autoPlay: true, loop: true,),
     );
+
     super.initState();
   }
   @override
   void dispose() {
     _controller.pause();
     super.dispose();
+
   }
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
+
       body: Consumer(
         builder: (context, watch, _) {
            return Container(
              color: Colors.black,
              child: Center(
-               child: YoutubePlayerBuilder(player: YoutubePlayer(controller: _controller,)
-                 ,builder: (context, player) {
+               child: YoutubePlayerBuilder(
+                 player: YoutubePlayer(
+                   controller:
+                   _controller,
+                   progressColors: const ProgressBarColors(
+                       playedColor: Colors.red,
+                       handleColor: Colors.transparent,
+                       bufferedColor: Colors.grey,
+
+                   ),
+                 ),
+                 builder: (context, player) {
                  return YoutubePlayer(controller: _controller);
                  },
                ),
