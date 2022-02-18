@@ -35,6 +35,6 @@ class Logo extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Image.network('https://obsproject.com/media/pages/blog/youtube-becomes-premier-sponsor-of-the-obs-project/e31fc69deb-1618879601/yt_logo_mono_dark_small.png',
       height: 200,width: 200,);
-    // Image.network('https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png');
+    // Image.network('https://obsproject.com/media/pages/blog/youtube-becomes-premier-sponsor-of-the-obs-project/e31fc69deb-1618879601/yt_logo_mono_dark_small.png');
   }
 }

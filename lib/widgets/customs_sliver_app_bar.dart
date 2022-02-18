@@ -29,7 +29,7 @@ class CustomSliverAppBar extends StatelessWidget {
         ),
         IconButton(
           iconSize: 40,
-          icon: const CircleAvatar(foregroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/assets?q=tbn:ANd9GcTlHidJs9A2sNkuM9gCih3fO49j6D8gEAZuzg&usqp=CAU'),),
+          icon: const CircleAvatar(foregroundImage: NetworkImage('http://mustafa-hameed.com/wp-content/uploads/2021/12/cropped-unnamed.png'),),
           onPressed: () {},
         ),
       ],
